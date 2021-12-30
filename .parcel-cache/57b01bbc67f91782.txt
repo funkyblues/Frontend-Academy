@@ -1,5 +1,12 @@
-4
-29C:\Frontend-Academy\README.md132853016720296057 0
-57C:\Frontend-Academy\Starter_kit_Hacker News Client\app.js132853020816770872 0
-50C:\Frontend-Academy\Starter_kit_Hacker News Client132853020816780873 1
-61C:\Frontend-Academy\Starter_kit_Hacker News Client\index.html132853020816780873 0
+11
+55C:\Frontend-Academy\Starter_kit_Hacker_News_Client\dist132853347899285769 1
+29C:\Frontend-Academy\README.md132853347899225925 0
+57C:\Frontend-Academy\Starter_kit_Hacker_News_Client\app.js132853347899265821 0
+64C:\Frontend-Academy\Starter_kit_Hacker_News_Client\.parcel-cache132853347899255847 1
+50C:\Frontend-Academy\Starter_kit_Hacker_News_Client132853347899295830 1
+61C:\Frontend-Academy\Starter_kit_Hacker_News_Client\index.html132853347899295830 0
+73C:\Frontend-Academy\Starter_kit_Hacker_News_Client\dist\index.833266ea.js132853347899275792 0
+77C:\Frontend-Academy\Starter_kit_Hacker_News_Client\dist\index.833266ea.js.map132853347899275792 0
+66C:\Frontend-Academy\Starter_kit_Hacker_News_Client\dist\index.html132853347899285769 0
+73C:\Frontend-Academy\Starter_kit_Hacker_News_Client\.parcel-cache\data.mdb132853347899255847 0
+73C:\Frontend-Academy\Starter_kit_Hacker_News_Client\.parcel-cache\lock.mdb132853347899255847 0

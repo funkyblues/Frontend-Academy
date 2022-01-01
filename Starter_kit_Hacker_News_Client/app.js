@@ -1,5 +1,10 @@
+const container = document.getElementById("root");
 const ajax = new XMLHttpRequest();
+const content = document.createElement("div");
 const NEWS_URL = "https://api.hnpwa.com/v0/news/1.json";
+//나중에 클릭했을 때 id를 결정해줘야 하므로, @으로 써서 마킹만 하는 것.
+const CONTENTS_URL = "https://api.hnpwa.com/v0/item/@id.json";
+
 
 // false : 비동기가 아닌, 동기적으로 처리하겠다는 의미의 코드
 ajax.open("GET", NEWS_URL, false);
@@ -24,13 +29,40 @@ const newsFeed = JSON.parse(ajax.response);
 // ul태그 반환.
 const ul = document.createElement("ul");
 
+// 링크태그에 넣어둔 해시(hash)를 변경하는 함수를 사용하겠다!
+// 자바스크립트 자체가 함수를 값으로 취급해서 함수한테 전달할 수 있기 때문에 이렇게 작성한다.
+window.addEventListener("hashchange", function () {
+  // 받고자 하는 위치의 hash를 가져오는데, substr를 사용해서 첫번째 위치부터 가져오겠다는 뜻
+  const id = location.hash.substr(1);
+
+  ajax.open("GET", CONTENTS_URL.replace('@id', id), false);
+  ajax.send();
+
+  const newsContents = JSON.parse(ajax.response);
+  const title = document.createElement("h1");
+
+  title.innerHTML = newsContents.title;
+  content.appendChild(title);
+  console.log(newsContents);
+})
+
+
 for(let i = 0; i < 10; i++) {
   const li = document.createElement("li");
-  li.innerHTML = newsFeed[i].title;
+  const a = document.createElement("a");
+   
+  a.href = `#${newsFeed[i].id}`;
+  a.innerHTML = `${newsFeed[i].title} ${newsFeed[i].comments_count}`;
+
+  a.addEventListener("click", function () { })
+  li.appendChild(a);
   ul.appendChild(li);
 }
 
-document.getElementById("root").appendChild(ul);
+
+
+container.appendChild(ul);
+container.appendChild(content);
 
 
 // document.getElementById('root').innerHTML = `<ul>
